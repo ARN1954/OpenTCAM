@@ -31,5 +31,6 @@
         "tcam", "TCAM",
         "sram", "SRAM",
         "dataframe"
-    ]
+    ],
+    "ros.distro": "humble"
 }
