@@ -42,14 +42,14 @@ module tb_tcam;
         
         // Block 0: in_addr[9:8]=00
         // Lower half (address 5)
-        in_addr = {18'b0, 2'b00, 1'b1, 7'b0000101};
+        in_addr = {18'b0, 2'b00, 1'b0, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000010000;
         #100;
         $display("Write Block 0 Lower: addr = %b, data = %b", in_addr, in_wdata);
         #100;
         $display("[Confirm] Block 0 out_rdata = %b", dut.out_rdata0);
         // Upper half (address 133 = 10000101)
-        in_addr = {18'b0, 2'b00, 1'b0, 7'b0000101};
+        in_addr = {18'b0, 2'b00, 1'b1, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000000000;
         #100;
         $display("Write Block 0 Upper: addr = %b, data = %b", in_addr, in_wdata);
@@ -58,14 +58,14 @@ module tb_tcam;
         
         // Block 1: in_addr[9:8]=01
         // Lower half (address 5)
-        in_addr = {18'b0, 2'b01, 1'b1, 7'b0000101};
+        in_addr = {18'b0, 2'b01, 1'b0, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000010000;
         #100;
         $display("Write Block 1 Lower: addr = %b, data = %b", in_addr, in_wdata);
         #100;
         $display("[Confirm] Block 1 out_rdata = %b", dut.out_rdata1);
         // Upper half (address 133 = 10000101)
-        in_addr = {18'b0, 2'b01, 1'b0, 7'b0000101};
+        in_addr = {18'b0, 2'b01, 1'b1, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000000000;
         #100;
         $display("Write Block 1 Upper: addr = %b, data = %b", in_addr, in_wdata);
@@ -74,14 +74,14 @@ module tb_tcam;
         
         // Block 2: in_addr[9:8]=10
         // Lower half (address 5)
-        in_addr = {18'b0, 2'b10, 1'b1, 7'b0000101};
+        in_addr = {18'b0, 2'b10, 1'b0, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000010000;
         #100;
         $display("Write Block 2 Lower: addr = %b, data = %b", in_addr, in_wdata);
         #100;
         $display("[Confirm] Block 2 out_rdata = %b", dut.out_rdata2);
         // Upper half (address 133 = 10000101)
-        in_addr = {18'b0, 2'b10, 1'b0, 7'b0000101};
+        in_addr = {18'b0, 2'b10, 1'b1, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000000000;
         #100;
         $display("Write Block 2 Upper: addr = %b, data = %b", in_addr, in_wdata);
@@ -90,14 +90,14 @@ module tb_tcam;
         
         // Block 3: in_addr[9:8]=11
         // Lower half (address 5)
-        in_addr = {18'b0, 2'b11, 1'b1, 7'b0000101};
+        in_addr = {18'b0, 2'b11, 1'b0, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000010000;
         #100;
         $display("Write Block 3 Lower: addr = %b, data = %b", in_addr, in_wdata);
         #100;
         $display("[Confirm] Block 3 out_rdata = %b", dut.out_rdata3);
         // Upper half (address 133 = 10000101)
-        in_addr = {18'b0, 2'b11, 1'b0, 7'b0000101};
+        in_addr = {18'b0, 2'b11, 1'b1, 7'b0000101};
         in_wdata = 32'b00000000000000000000000000000000;
         #100;
         $display("Write Block 3 Upper: addr = %b, data = %b", in_addr, in_wdata);
