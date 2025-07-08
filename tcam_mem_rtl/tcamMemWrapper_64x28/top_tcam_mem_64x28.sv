@@ -92,12 +92,11 @@ module top_tcam_mem (
 
     // AND gate instantiations
     wire	[63:0]	out_gate0;
-    wire	[63:0]	out_gate1;
-    wire	[63:0]	out_gate2;
+    wire	[63:0]	out_gate1;    
     wire	[63:0]	out_andgate;
     and_gate and_gate_dut0 (.out_data(out_gate0), .in_dataA(out_rdata0), .in_dataB(out_rdata1));
     and_gate and_gate_dut1 (.out_data(out_gate1), .in_dataA(out_gate0), .in_dataB(out_rdata2));
-    and_gate and_gate_dut2 (.out_data(out_andgate), .in_dataA(out_gate2), .in_dataB(out_rdata3));
+    and_gate and_gate_dut2 (.out_data(out_andgate), .in_dataA(out_gate1), .in_dataB(out_rdata3));
 
     // Priority Encoder instantiations
     priority_encoder_64x6 priority_encoder_dut0(
